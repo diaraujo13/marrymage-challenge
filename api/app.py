@@ -1,9 +1,12 @@
-from flask import Flask
+from flask import Flask, jsonify
+
 app = Flask(__name__)
 
+
 @app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
+def hello_world():
+    return jsonify({'status': 'working'})
+
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
