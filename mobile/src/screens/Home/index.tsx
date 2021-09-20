@@ -1,7 +1,12 @@
+import { useNavigation, useRoute } from '@react-navigation/core';
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 const Home = () => {
+    
+    const navigation = useNavigation();
+    const route = useRoute();
+
     return (
         <View style={styles.container}>
             <Text>Home</Text>
